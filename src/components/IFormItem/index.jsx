@@ -69,6 +69,9 @@ export default (props) => {
       case 'input':
         item = <Input {...others} />;
         break;
+      case 'password':
+        item = <Input type='password' {...others} />;
+        break;
       case 'xinput':
         item = <XInput {...others} />;
         break;
@@ -127,11 +130,11 @@ export default (props) => {
         break;
       case 'submit':
         beFormItem = false;
-        item = <Button type={type || 'primary'} loading={loading} htmlType="submit" {...others} />;
+        item = <Button type={type || 'primary'} loading={loading} htmlType="submit" {...others} >{children}</Button>;
         break;
       case 'button':
         beFormItem = false;
-        item = <Button type={type || 'default'} {...others} />;
+        item = <Button type={type || 'default'} {...others} >{children}</Button>;
         break;
       case 'user':
         item = <User tag={tag} {...others} displayName={displayName} />;
@@ -155,7 +158,7 @@ export default (props) => {
         item = <IStatus state={props.state} />
         break;
       case 'span':
-        item = <span className="ant-form-text">{children}</span>
+        item = <span className="ant-form-text" {...others}>{children}</span>
         break;
       case 'empty':
         beFormItem = false;

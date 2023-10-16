@@ -9,7 +9,7 @@ import { api, getPageQuery, constant } from '@/common/utils';
 class AvatarDropdown extends React.Component {
   onMenuClick = (event) => {
     const { key } = event;
-    const account = { center: '个人中心', settings: '历史消息' };
+    const account = { center: '个人中心'};
 
     if (key === 'logout') {
       // const { dispatch } = this.props;
@@ -34,14 +34,12 @@ class AvatarDropdown extends React.Component {
     // const { currentUser } = this.state;
     const menuHeaderDropdown = (
       <Menu className={styles.menu} onClick={this.onMenuClick}>
+        {sessionStorage.getItem(constant.KEY_USER_SYSTEM_TAG) !== 'temp' && (
         <Menu.Item key="center">
           <UserOutlined />
           个人中心
         </Menu.Item>
-        <Menu.Item key="settings">
-          <MessageOutlined />
-          历史消息
-        </Menu.Item>
+        )}
         <Menu.Divider />
         <Menu.Item key="logout">
           <LogoutOutlined />

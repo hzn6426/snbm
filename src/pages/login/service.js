@@ -45,6 +45,10 @@ export function validateUserForDepartments(user) {
   return opost(constant.API_USER_VALIDATE_FOR_USER_DEPARTMENTS, user);
 }
 
+export function validateUserEmail(email) {
+  return ipost(constant.API_USER_EMAIL_VALIDATE, email);
+}
+
 //根据ID获取用户
 export function getUser(id) {
   return iget(`${constant.API_USER}/${id}`)

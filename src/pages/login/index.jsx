@@ -41,11 +41,14 @@ export default (props) => {
 
 
 
-  const handleToken = (token) => {
+  const handleToken = (token, systemTag) => {
     let itoken;
     if (!isEmpty(token)) {
       itoken = `Bearer ${token}`;
       sessionStorage.setItem(constant.KEY_USER_TOKEN, itoken);
+    }
+    if (systemTag) {
+      sessionStorage.setItem(constant.KEY_USER_SYSTEM_TAG, systemTag);
     }
   };
 
@@ -133,7 +136,7 @@ export default (props) => {
       next: (data) => {
         const resp = data[0];
         handleRemeberMe(v);
-        handleToken(resp.access_token);
+        handleToken(resp.access_token, v.systemTag);
         handleRedirect();
         api.user.loadUserButtons().subscribe({
           next: (br) => {

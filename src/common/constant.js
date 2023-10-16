@@ -10,6 +10,8 @@ export default Object.freeze({
   KEY_USER_BUTTON_PERMS: '_USER_BUTTON_PERMS',
   // 用户token存储KEY-sessionStorage
   KEY_USER_TOKEN: '_USER_TOKEN',
+  //系统标识
+  KEY_USER_SYSTEM_TAG: '_USER_SYSTEM_TAG',
   //用户数据缓存
   KEY_USER: '_USER',
   //分类缓存
@@ -61,6 +63,8 @@ export default Object.freeze({
   API_USER_LIST_BY_KEYWORD: '/authority/user/listByTagAndKeyWord',
   //验证用户并获取组织
   API_USER_VALIDATE_FOR_USER_DEPARTMENTS: '/authority/user/validateUserForDepartments',
+   // 邮件验证
+   API_USER_EMAIL_VALIDATE: '/authority/user/validateEmail',
   //获取所有TAG对应的组织列表和用户
   API_USER_TREE_ALL_GROUPS_AND_USERS_BY_TAG: '/authority/group/treeAllGroupsAndUsersByTag',
   //= ==============================================//

@@ -21,6 +21,7 @@ export default [
           },
         ],
       },
+
       {
         path: '/new',
         routes: [
@@ -71,6 +72,18 @@ export default [
                 icon: 'smile',
                 path: '/dashboard/blog',
                 component: './dashboard/blog',
+              },
+            ],
+          },
+          // 个人设置
+          {
+            path: '/account',
+            routes: [
+              {
+                name: '个人中心',
+                icon: 'smile',
+                path: '/account/center',
+                component: './account/center',
               },
             ],
           },
