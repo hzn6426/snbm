@@ -26,8 +26,8 @@ export default Object.freeze({
   SYSTEM_ROUTE_LOGIN: '/user/login',
   // 系统标题
   SYSTEM_TITLE: '业务管理系统',
-  SYSTEM_LOGIN_TITLE: '业务权限演示系统',
-  SYSTEM_LOGIN_DESC: 'SNAPPER — 演示环境V1.0',
+  SYSTEM_LOGIN_TITLE: 'Snapper业务演示系统',
+  SYSTEM_LOGIN_DESC: '做专业的权限管理 — 演示环境3.0.7',
   // basicLayout 刷新
   SUBJECT_SYSTEM_REFRESH: '_subject_system_refresh',
   // 缓存超时时间
