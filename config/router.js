@@ -12,10 +12,6 @@ export default [
             path: '/user/login',
             component: './login',
           },
-          // {
-          //   path: '/user',
-          //   redirect: '/user/login',
-          // },
           {
             component: '404',
           },
